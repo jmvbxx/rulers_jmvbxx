@@ -5,7 +5,9 @@ RSpec.describe RulersJmvbxx do
     expect(RulersJmvbxx::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "returns http success" do
+  end
+
+  it "returns body of '<SOMETHING>'" do
   end
 end

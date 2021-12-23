@@ -10,7 +10,7 @@ module RulersJmvbxx
   # This is is main application class (for now)
   class Application
     def call(env)
-      if env['PATH_INFO'] == '/favicon.ico'
+      if env["PATH_INFO"] == "/favicon.ico"
         return [404,
                 { "Content-Type" => "text/html" }, []]
       end
@@ -23,13 +23,12 @@ module RulersJmvbxx
     end
   end
 
+  # This is the first controller gem
   class Controller
     def initialize(env)
       @env = env
     end
 
-    def env
-      @env
-    end
+    attr_reader :env
   end
 end

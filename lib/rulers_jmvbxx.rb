@@ -10,11 +10,12 @@ module RulersJmvbxx
   # This is is main application class (for now)
   class Application
     def call(env)
-      if env["PATH_INFO"] == "/favicon.ico"
+      case env["PATH_INFO"]
+      when "/favicon.ico"
         [404, { "Content-Type" => "text/html" }, []]
-      elsif env["PATH_INFO"] == "/test"
+      when "/test"
         [200, { "Content-Type" => "text/html" }, [File.read("public/index.html")]]
-      elsif env["PATH_INFO"] == "/search"
+      when "/search"
         [301, { "Location" => "https://google.com" }, []]
       else
         klass, act = get_controller_and_action(env)

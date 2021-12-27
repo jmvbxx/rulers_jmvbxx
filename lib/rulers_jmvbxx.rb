@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "rulers_jmvbxx/version"
+require "rulers_jmvbxx/version"
 require "rulers_jmvbxx/array"
 require "rulers_jmvbxx/routing"
+require "rulers_jmvbxx/util"
+require "rulers_jmvbxx/dependencies"
 
 module RulersJmvbxx
   class Error < StandardError; end
@@ -14,7 +16,7 @@ module RulersJmvbxx
       when "/favicon.ico"
         [404, { "Content-Type" => "text/html" }, []]
       when "/test"
-        [200, { "Content-Type" => "text/html" }, [File.read("public/index.html")]]
+        [200, { "Content-Type" => "text/html" }, [File.read("test/index.html")]]
       when "/search"
         [301, { "Location" => "https://google.com" }, []]
       else

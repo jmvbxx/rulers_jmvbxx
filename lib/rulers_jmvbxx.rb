@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "rulers_jmvbxx/version"
+require "rulers_jmvbxx/version"
 require "rulers_jmvbxx/array"
 require "rulers_jmvbxx/routing"
+require "rulers_jmvbxx/util"
+require "rulers_jmvbxx/dependencies"
 
 module RulersJmvbxx
   class Error < StandardError; end

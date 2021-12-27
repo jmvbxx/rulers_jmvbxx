@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rulers_jmvbxx (0.2.0)
+    rulers_jmvbxx (0.3.0)
       rack
 
 GEM

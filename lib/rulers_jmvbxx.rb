@@ -14,7 +14,7 @@ module RulersJmvbxx
       when "/favicon.ico"
         [404, { "Content-Type" => "text/html" }, []]
       when "/test"
-        [200, { "Content-Type" => "text/html" }, [File.read("public/index.html")]]
+        [200, { "Content-Type" => "text/html" }, [File.read("test/index.html")]]
       when "/search"
         [301, { "Location" => "https://google.com" }, []]
       else

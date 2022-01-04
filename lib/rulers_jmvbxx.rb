@@ -5,6 +5,7 @@ require "rulers_jmvbxx/array"
 require "rulers_jmvbxx/routing"
 require "rulers_jmvbxx/util"
 require "rulers_jmvbxx/dependencies"
+require "rulers_jmvbxx/controller"
 
 module RulersJmvbxx
   class Error < StandardError; end
@@ -26,14 +27,5 @@ module RulersJmvbxx
         [200, { "Content-Type" => "text/html" }, [text]]
       end
     end
-  end
-
-  # This is the first controller gem
-  class Controller
-    def initialize(env)
-      @env = env
-    end
-
-    attr_reader :env
   end
 end
